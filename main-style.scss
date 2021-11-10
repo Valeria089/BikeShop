@@ -1,0 +1,79 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 50px 1fr 70px 20px;
+    grid-template-areas: "head" "navigation" "main" "aside" "footer";
+    min-height: 100vh;
+}
+.header {
+    grid-area: head;
+    background-color: black;
+    &__logo{
+        width: 150px;
+        height: 100px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.nav {
+    grid-area: navigation;
+    background-color: lightgrey;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__home, &__contact, &__about, &__reg, &__res {
+        margin: 20px;
+        &:link, &:visited{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+        &:hover {
+            color: white;
+        } 
+    }
+}
+
+.aside {
+    grid-area: aside;
+    background-color: lightgrey;
+}
+.footer {
+    grid-area: footer;
+    background-color: grey;
+    color: white;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+  grid-area: main;
+  color: grey;
+  padding: 10px;
+ 
+}
+
+@media (min-width: 1200px) {
+
+    body {
+      grid-template-columns: 150px 1fr 150px;
+      grid-template-rows: 100px 1fr 20px;
+      grid-template-areas: "head head head" "navigation main aside" "footer footer footer";
+      margin-top: 0;
+      }
+      .nav {
+          display: block;
+      &__home, &__contact, &__about, &__reg, &__res {
+          display: block;
+          margin-top: 20px;
+      }
+    }
+}

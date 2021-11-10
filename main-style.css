@@ -1,0 +1,81 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 50px 1fr 70px 20px;
+  grid-template-areas: "head" "navigation" "main" "aside" "footer";
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: head;
+  background-color: black;
+}
+.header__logo {
+  width: 150px;
+  height: 100px;
+}
+.header__logo:hover {
+  cursor: pointer;
+}
+
+.nav {
+  grid-area: navigation;
+  background-color: lightgrey;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__home, .nav__contact, .nav__about, .nav__reg, .nav__res {
+  margin: 20px;
+}
+.nav__home:link, .nav__home:visited, .nav__contact:link, .nav__contact:visited, .nav__about:link, .nav__about:visited, .nav__reg:link, .nav__reg:visited, .nav__res:link, .nav__res:visited {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.nav__home:hover, .nav__contact:hover, .nav__about:hover, .nav__reg:hover, .nav__res:hover {
+  color: white;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: lightgrey;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: grey;
+  color: white;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  grid-area: main;
+  color: grey;
+  padding: 10px;
+}
+
+@media (min-width: 1200px) {
+  body {
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 100px 1fr 20px;
+    grid-template-areas: "head head head" "navigation main aside" "footer footer footer";
+    margin-top: 0;
+  }
+
+  .nav {
+    display: block;
+  }
+  .nav__home, .nav__contact, .nav__about, .nav__reg, .nav__res {
+    display: block;
+    margin-top: 20px;
+  }
+}

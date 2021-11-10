@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Bike shop</title>
+    <link rel="stylesheet" href="main-style.css">
+    <link rel="stylesheet" href="order/style.css">
+</head>
+<body>
+
+    <header class="header"> 
+        <a href="index.html"><img class="header__logo" src="img/logo.jpeg"></a>
+    </header>
+
+    <nav class="nav">
+        <a class="nav__home" href="index.html">Home</a>
+        <a class="nav__about" href="about.html">About</a>
+        <a class="nav__contact" href="contacts.html">Contact</a>
+        <a class="nav__reg" href="reg.html">Register</a>
+        <a class="nav__res" href="order.html">Order page</a>
+    </nav>
+
+    <main class="content"> 
+
+            <!-- <div class="tabs">
+            <div class="tabs__nav tabs-nav">
+                <div class="tabs-nav__item is-active" data-tab-name="tab-1">Step 1</div>
+                <div class="tabs-nav__item" data-tab-name="tab-2">Step 2</div>
+                <div class="tabs-nav__item" data-tab-name="tab-3">Step 3</div>
+                <div class="tabs-nav__item" data-tab-name="tab-4">Step 4</div>
+                <div class="tabs-nav__item" data-tab-name="tab-5">Step 5</div>
+                <div class="tabs-nav__item" data-tab-name="tab-6">Step 6</div>
+            </div>
+            <div class="tabs__content" > -->
+    
+    <!-- <form action="result.html"> -->
+        <form>
+        <div class="chooseModel"> 
+            <h3>*Model of bike<h3>
+            
+            <label for = "chooseModelbike"> Choose model: </label>
+            <select name = "chooseModelbike" class = "chooseModel__bike storage" id = "chooseModelbike" >
+                <option value="pink">Pink bike</option>
+                <option value="green">Green bike</option>
+                <option value="orange">Orange bike</option>
+                <option value="yellow">Yellow bike</option>                                
+                <option value="blue">Blue bike</option>
+            </select>
+            <div></div>
+            <textarea  name="chooseModelComment" id='chooseModelComment' class="chooseModel__comment storage" placeholder='Enter additional information' rows="3" cols="27"></textarea>
+        </div>
+                
+        <div class="billingAdress">
+            <h3>*Billing adress</h3>
+                <label for="billingAdressName"> Name: </label>    
+                <input type="text" id="billingAdressName" class="billingAdress__name storage" name="billingAdressName" value="" >
+                <div class="error"></div>
+
+                <label for="billingAdressSurname"> Surname:  </label>   
+                <input type="text" id="billingAdressSurname" class="billingAdress__surname storage" name="billingAdressSurname" value="" >
+                <div class="error"></div>
+                
+                <label for="billingAdressStreet"> Street adress: </label> 
+                <input type="text" id="billingAdressStreet" class="billingAdress__street storage" name="billingAdressStreet" value="" >
+                <div class="error"></div>
+        
+                <label for="billingAdressStateRegion">Choose State or Region: </label> 
+                <select name="billingAdressStateRegion" id="billingAdressStateRegion" class="billingAdress__stateregion" storage>
+                    <option value="State">State</option>
+                    <option value="Region">Region</option>
+                </select>
+                <div class="error"></div>
+                        
+                <label for="billingAdressZipCode">ZIP code:  </label>
+                <input type="text" id="billingAdressZipCode" class="billingAdress__ZipCode storage" name="billingAdressZipCode" value=""  >
+                <div class="error"></div>
+                        
+                <label for="billingAdressPhone"> Phone number: </label>
+                <input type="text" id="billingAdressPhone" class="billingAdress__Phone storage" name="billingAdressPhone" value="" placeholder="+3801234567" >
+                <div class="error"></div>            
+        </div>
+                
+        <div class="deliveryAdress">
+            <h3>*Delivery Adress</h3>
+                <label for = "checkAdress">Like a Billing Adress</label>
+                <input type = "checkbox" id="checkAdress" class='deliveryAdress__check storage'name="checkAdress" value="" >
+                <div class="error"></div>
+
+                <label for="deliveryAdressName"> Name: </label>    
+                <input type="text" id="deliveryAdressName" class="deliveryAdress__name storage" name ="deliveryAdressName" value=""  >
+                <div class="error"></div>
+                
+                <label for=deliveryAdressSurname"> Surname:  </label>   
+                <input type="text" id="deliveryAdressSurname" class="deliveryAdress__surname storage" name ="deliveryAdressSurname" value=""  >
+                <div class="error"></div>
+                        
+                <label for=deliveryAdressStreet"> Street adress: </label> 
+                <input type="text" id="deliveryAdressStreet" class="deliveryAdress__street storage" name = "deliveryAdressStreet" value=""  >
+                <div class="error"></div>
+        
+                <label for=deliveryAdressStateRegion">Choose State or Region: </label> 
+                <select name="deliveryAdressStateRegion" id="deliveryAdressStateRegion" class="deliveryAdress__choose storage">
+                    <option value="State">State</option>
+                    <option value="Region">Region</option>
+                </select>
+                <div class="error"></div>
+                        
+                <label for="deliveryAdressZipCode">ZIP code:  </label>
+                <input type="text" id="deliveryAdressZipCode" class="deliveryAdress__ZipCode storage" name = "deliveryAdressZipCode" value="" >
+                <div class="error"></div>
+                        
+                <label for="deliveryAdressPhone"> Phone number: </label>
+                <input type="text" id="deliveryAdressPhone" class="deliveryAdress__Phone storage" name = "deliveryAdressPhone" value="" placeholder="+3801234567" >
+                <div class="error"></div> 
+        </div>
+                
+        <div class="deliveryDate">
+               <h3>*Delivery Date</h3>
+               <label for="deliveryDate"></label>
+               <input type="date" id="dateDelivery" name="dateDelivery" class="deliveryDate__date storage" min="2021-01-01" max="2022-01-01">
+               <div class="error"></div>
+        </div>
+                
+        <div class="payment">
+            <h3>*Payment</h3>
+            <label for="typeCard"> Choose type of card</label>
+            <select id="typeCard" name="typeCard" class="payment__typeCard storage">
+                
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+            </select>
+            <div class="error"></div>
+
+            <label for="cardNumber">card number</label>
+            <input type="text" id="cardNumber" name = "cardNumber" class="payment__cardNumber storage" placeholder="Card number" >
+            <div class="error"></div>
+            
+            <label for="expirationdate">expiration (mm/yy)</label>
+            <input id="expirationdate" name = "expirationdate" class="payment__expiration storage" type="text" >
+            <div class="error"></div>
+
+            <label for="cvv">security code</label>
+            <input id="cvv" name = "cvv" class="payment__cvv storage" type="text">
+            <div class="error"></div>
+        </div>
+                
+        <div class="reg">
+            <h3>Create account?</h3>
+            <label for="regName">Name</label>
+            <input type="text" name = "regName" placeholder="Enter Your Name" class='storage' id="regName" >
+            <div class="error"></div>
+                
+            <label for="regPsw">Password</label>
+            <input type="password" name = "regPsw" placeholder="Enter Password" class='storage' id="regPsw" >
+            <div class="error"></div>
+                
+            <label for="regPswrepeat">Repeat Password</label>
+            <input type="password" name = "regPswrepeat" placeholder="Repeat Password" class='storage' id="regPswrepeat" >
+            <div class="error"></div>       
+        </div>
+        <input type="submit" class='submit' id='submitBtn'>
+    </form>
+        
+        <!-- </div>
+        <input type="button" class="prev hidden" id="prev" value="Prev">
+        <input type="button" class="next" id="next" value = "Next">
+        </div> -->
+    </main>
+
+    <aside class="aside"></aside>
+
+    <footer class="footer">
+        <p class="footer_copy">&#169; Bike shop | 2021</p>
+    </footer>
+
+    <script src="js/order.js">
+    </script>
+</body>
+</html>    
